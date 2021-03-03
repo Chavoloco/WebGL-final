@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Grupo América | Playcare</title>
+    <link rel="shortcut icon" href="TemplateData/playcare.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/WebGL-PC.json", {onProgress: UnityProgress});
+      window.onload = setWindowHeightAndWidth;
+      function setWindowHeightAndWidth() {
+        var windowHeight = document.documentElement.clientHeight;
+        var windowWidth = document.documentElement.clientWidth;
+        document.getElementById("#canvas").style.height =  (windowHeight-105)  + "px";
+        document.getElementById("#canvas").style.width = (windowWidth-40) + "px";
+      }
+    </script>
+  </head>
+  <body style="margin: 100px 20px 5px 20px; overflow: hidden;">
+    <div id="unityContainer" >
+    <div id="carga"></div>
+      <canvas id="#canvas"></canvas>
+    </div>
+
+    <script>
+      window.onload = function() {
+        var contenedor = document.getElementById('contenedor_carga');
+      }
+    </script>
+  </body>
+</html>
